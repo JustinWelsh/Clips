@@ -14,4 +14,7 @@ export class ModalComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
   }
+
+  // TODO: Create a function for closing our modal.
+  closeModal = () => this.modal.toggleModal();
 }
