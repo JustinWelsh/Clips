@@ -14,6 +14,6 @@ export class NavComponent implements OnInit {
   // TODO: Create a function that will toggle our modal and prevent a page refresh.
   openModal($event: Event) {
     $event.preventDefault();
-    this.modal.toggleModal();
+    this.modal.toggleModal('auth');
   }
 }
