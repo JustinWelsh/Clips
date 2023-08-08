@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
@@ -10,11 +10,10 @@ import { ModalService } from 'src/app/services/modal.service';
 export class ModalComponent implements OnInit {
   @Input() modalID = '';
 
-  constructor(public modal: ModalService) {}
+  constructor(public modal: ModalService, public el: ElementRef) {}
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+    document.body.appendChild(this.el.nativeElement);
   }
 
   // TODO: Create a function for closing our modal.
