@@ -1,2 +1,4 @@
 <!-- <p>tab works!</p> -->
-<ng-content></ng-content>
+<div [class.hidden]="!active">
+  <ng-content></ng-content>
+</div>
