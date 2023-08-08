@@ -21,6 +21,10 @@ export class ModalService {
     });
   };
 
+  unregister(id: string) {
+    this.modals = this.modals.filter((m) => m.id !== id);
+  }
+
   // TODO: Create a function that returns the value of our modals visability.
   // TODO: Create a function that toggles visability.
 
